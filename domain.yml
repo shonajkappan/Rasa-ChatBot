@@ -1,0 +1,120 @@
+version: "3.1"
+
+intents:
+  - greet
+  - topics
+  - get_entity_info
+  - goodbye
+  - paid_free
+  - thank_you
+  - unrelated
+  - bot_challenge
+  - provide_user_input_time
+  - provide_user_input_time_equal
+  - get minimum subscribers
+
+
+entities:
+  - topic
+  - is_paid
+  - user
+  - user_input_time
+  - condition
+  - title
+  - minSub
+  
+
+slots:
+
+  user_input_time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_input_time
+
+  condition:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: condition
+
+  topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: topic
+
+  title:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: title
+
+  is_paid:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: is_paid
+
+  minSub:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: minSub
+
+  # - goodbye
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  # - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_udemy_welcome:
+  - text: "I am here to help you to choose the right udemy course.Which course are you interested in?"
+
+  utter_paid_free:
+  - text: "Do you want to filter paid courses alone?"
+
+  utter_anyother:
+  - text: "Do you need information on anyother course?"
+
+  utter_thanks:
+  - text: "Thank you for selecting the topic. Do you need paid courses?"
+ 
+  utter_topic_list:
+  - text: "Here are some courses on the mentioned topic along with the url"
+
+  utter_respond_with_topic:
+  - text: "Your selected topic is {topic}. This is a dynamic response."
+
+  utter_thank_you:
+  - text: "It's my pleasure ,I'm here to assist you"
+
+  utter_unrelated:
+  - text: "Please enter valid input."
+  
+actions:
+  - action_respond_with_topic
+  - action_print_executed_story
+  - action_find_paid_courses
+  - action_course_print_user_input
+  - action_find_greater_duration_courses
+  - action_find_same_duration_courses
+  - action_find_no_subscribers
+  
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

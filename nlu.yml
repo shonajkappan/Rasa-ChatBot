@@ -1,0 +1,288 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+- intent: topics
+  examples: |
+    - [javascript](topic)
+    - [html](topic)
+    - [php](topic)
+    - [bootsrap](topic)
+    - [jquery](topic)
+    - [laravel](topic)
+    - [ruby](topic)
+    - [python](topic)
+    - [ajax](topic)
+    - [hosting](topic)
+    - [xml](topic)
+    - [cms](topic)
+    - [joomla](topic)
+    - [git](topic)
+    - [trading](topic)
+    - [forex](topic)
+    - [accounting](topic)
+    - [stock](topic)
+    - [investment](topic)
+    - [GST](topic)
+
+    - [Graphic Design](topic)
+    - [photoshop](topic)
+    - [logo](topic)
+    - [graphic](topic)
+    - [drawing](topic)
+    - [canva](topic)
+    - [indesign](topic)
+    - [powerpoint](topic)
+    - [app](topic)
+    - [ebook](topic)
+    - [corel](topic)
+    - [3D](topic)
+    - [web](topic)
+    - [icon](topic)
+    - [inkscape](topic)
+    - [2D](topic)
+    - [comic](topic)
+    - [video](topic)
+    - [latex](topic)
+
+    - [Musical Instruments](topic)
+    - [harmonica](topic)
+    - [piano](topic)
+    - [guitar](topic)
+    - [bass](topic)
+    - [drums](topic)
+    - [euphonium](topic)
+    - [oud](topic)
+    - [cajon](topic)
+    - [trombone](topic)
+    - [flute](topic)
+    - [trumpet](topic)
+    - [clarinet](topic)
+    - [saxophone](topic)
+    - [harp](topic)
+    - [didgeridoo](topic)
+    - [violin](topic)
+    - [ukulele](topic)
+    - [oboe](topic)
+    - [darbuka](topic)
+    - [banjo](topic)
+
+- intent: udemy_courses
+  examples: |
+    - Can you name some udemy courses?
+    - which are the available udemy courses ?
+    - courses that are in  udemy ?
+    - which courses are there in udemy?
+
+- intent: udemy_course_enroll
+  examples: |
+    - How do I take a Udemy course?
+    - How to enroll in udemy course?
+    - How can I access udemy courses?
+    - how i can begin udemy courses?
+
+- intent: min_num_of_subscriber 
+  examples: |
+    - Which course has minimum number of subscribers?
+    - Which course has less number of subscribers?
+    - which course has zero number of subscriber?
+
+- intent: get_entity_info 
+  examples: |
+    - I want information about [GST trading finance trumpet data visualization](title)
+    - Tell me about [trading](title)
+    - provide some courses for [trumpet](title)
+    - What can you tell me about [finance](title)
+    - I want to learn [violin](title)
+    - Show some courses of [python](title)
+    - how can I learn [graphic design](title)
+    - list some courses for [xml](title)
+    - course for learning [guitar](title)
+    - course for [bootstrap](title)
+    - guide me with some courses on [3D](title)
+    - find some course for [latex](title)
+    - help me with some courses on [stock](title)
+    - show me something on [html web development](title)
+    
+
+- intent: paid_free 
+  examples: |
+ 
+    - [yes](is_paid)
+    - [no](is_paid)
+    - [true](is_paid)
+    - [false](is_paid)
+    - [yes](is_paid) show me some courses
+    - show me some [paid](is_paid) courses
+    - I'm looking for [paid](is_paid) options
+    - Can you recommend [free](is_paid) courses?
+    - Do you have [premium](is_paid) courses?
+    - Are there [paid](is_paid) courses available?
+    - I'm interested in [paid](is_paid) content
+    - Show me only [paid](is_paid) options
+    - What about [paid](is_paid) courses?
+    - Tell me about [free](is_paid) and [paid](is_paid) courses
+    - How about [paid](is_paid) options?
+    - Are there any [paid](is_paid) classes?
+    - Please suggest some [paid](is_paid) courses
+    - Can you list [paid](is_paid) courses for me?
+    - I'm open to both [free](is_paid) and [paid](is_paid) courses
+    - Which courses are [paid](is_paid)?
+    - Show me [paid](is_paid) courses in [Data Science](topic)
+    - I'm specifically looking for [paid](is_paid) courses
+    - Do you offer [paid](is_paid) training?
+    - I want information about [paid](is_paid) course options
+    - Are the [paid](is_paid) courses comprehensive?
+    - Can you suggest any [paid](is_paid) programs?
+    - How do I access [paid](is_paid) courses?
+    - What's available in terms of [paid](is_paid) content?
+    - Tell me more about [paid](is_paid) course benefits
+    - Show me [paid](is_paid) courses with high ratings
+    - Are the [paid](is_paid) courses self-paced?
+
+      
+      
+- intent: thank_you 
+  examples: |
+    - Thank You
+    - Thanks
+    - thank you
+
+- intent: unrelated 
+  examples: |
+    - sdfghjk
+    - wertjkc
+    - erwtgjbc
+    - iudjhcbsjs
+    - gddasha
+    - mvbnvkj
+    - wqtyiojdi
+    - ergvhf
+    - iduij
+    - 545444
+    - hfvdsiu645
+    - ygrvfh754878
+    - 4564684fhbrjnsk
+    - et63yhw6tfuh8e4864
+    - 66678hgj647j
+    - )($)#&*!@
+    - 554./,;'/[]'
+    - []]\/';'
+
+
+
+- intent: provide_user_input_time
+  examples: |
+  
+    - can you give courses [greater than](condition)  [6hours](user_input_time)
+    - show me some courses with duration [greater than](condition) [10 hours](user_input_time)
+    - show me some courses with duration [greater than](condition) [10 hours](user_input_time)
+    - show me some courses with duration [greater](condition) than [10 hours](user_input_time)
+    - show me some courses with duration [less than](condition) [10 hours](user_input_time)
+    - show me some courses with duration [less than](condition) [10 hours](user_input_time)
+    - show me some courses with duration [less](condition) than [10 hours](user_input_time)
+    - which are the  courses [greater than](condition) [5 hours](user_input_time)
+    - list courses [greater than](condition) [4 hours](user_input_time)
+    - courses [greater than](condition) [1 hour](user_input_time)
+    - can you give courses [greater than](condition) [6minutes](user_input_time)
+    - which are the  courses [greater than](condition) [5 minutes](user_input_time)
+    - list courses [greater than](condition) [4 minutes](user_input_time)
+    - courses [greater than](condition) [1 minute](user_input_time)
+    - can you give courses [greater](condition)than  [6hours](user_input_time)
+    - which are the  courses [greater](condition) [5 hours](user_input_time)
+    - list courses [greater](condition)than [4 hours](user_input_time)
+    - courses [greater](condition) [1 hour](user_input_time)
+    - can you give courses [greater](condition)than [6minutes](user_input_time)
+    - which are the  courses [greater](condition) [5 minutes](user_input_time)
+    - list courses [greater](condition) [4 minutes](user_input_time)
+    - courses [greater](condition)than [1 minute](user_input_time)
+    - can you give courses [more than](condition) [5seconds]](user_input_time)
+    - which are the  courses [more than](condition) [45 seconds](user_input_time)
+    - list courses [more than](condition) [4 seconds](user_input_time)
+    - courses [higher than](condition) [1 second](user_input_time)
+    - can you give courses [less than](condition)  [6hours](user_input_time)
+    - which are the  courses [less than](condition) [5 hours](user_input_time)
+    - list courses [less than](condition) [4 hours](user_input_time)
+    - courses [less than](condition) [1 hour](user_input_time)
+    - can you give courses [less than](condition) [6minutes](user_input_time)
+    - which are the  courses [less than](condition) [5 minutes](user_input_time)
+    - list courses [less than](condition) [4 minutes](user_input_time)
+    - courses [less than](condition) [1 minute](user_input_time)
+    - can you give courses [less than](condition) [5seconds]](user_input_time)
+    - which are the  courses [less than](condition) [45 seconds](user_input_time)
+    - list courses [less than](condition) [4 seconds](user_input_time)
+    - courses [less than](condition) [1 second](user_input_time)
+    - can you give courses [more](condition)than [5seconds]](user_input_time)
+    - which are the  courses [more](condition) [45 seconds](user_input_time)
+    - list courses [more](condition)than [4 seconds](user_input_time)
+    - courses [higher](condition) [1 second](user_input_time)
+    - can you give courses [less](condition)than  [6hours](user_input_time)
+    - which are the  courses [less](condition) [5 hours](user_input_time)
+    - list courses [less](condition) than[4 hours](user_input_time)
+    - courses [less](condition) [1 hour](user_input_time)
+    - can you give courses [less](condition)than [6minutes](user_input_time)
+    - which are the  courses [less](condition) [5 minutes](user_input_time)
+    - list courses [less](condition)than [4 minutes](user_input_time)
+    - courses [less](condition) [1 minute](user_input_time)
+    - can you give courses [less]than(condition) [5seconds]](user_input_time)
+    - which are the  courses [less](condition) [45 seconds](user_input_time)
+    - list courses [less](condition)than [4 seconds](user_input_time)
+    - courses [less](condition) [1 second](user_input_time)
+
+- intent: provide_user_input_time_equal
+  examples: | 
+    -  courses duration equal to [5 hours](user_input_time)
+    -  list some courses that take upto [10 hours](user_input_time)
+    -  can you some courses whose duration is [10 minutes](user_input_time)
+    -  which  are the courses that has duration [5 seconds](user_input_time)
+    -  courses that has same duration of [7 seconds](user_input_time)
+    -  list some courses duration equal to [5 hours](user_input_time)
+    -  list some courses that take upto [10 hours](user_input_time)
+    -  can you some courses whose duration is [10 minutes](user_input_time)
+    -  which  are the courses that has duration [5 seconds](user_input_time)
+    -  courses that has same duration of [7 seconds](user_input_time)
+    
+- intent: get minimum subscribers
+  examples: | 
+    -  show me courses subscribers more than [100](minSub)
+    -  courses with subscribers more than [20](minSub)    
+    -  i want courses with subscribers more than [500](minSub)
+    -  courses with subscribers more than [1000](minSub)   

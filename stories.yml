@@ -1,0 +1,113 @@
+version: "3.1"
+
+stories:
+
+
+- story: greet and thank
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_udemy_welcome
+
+- story: good bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  #- action: action_print_executed_story
+- story: thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+  
+- story: Get course information and paid_title
+  steps:
+  - intent: get_entity_info
+  - action: action_course_print_user_input
+  # - action: action_respond_with_topic
+
+- story: paid courses
+  steps:
+  - intent: paid_free
+  - action: action_find_paid_courses
+
+
+
+- story: Get course information and paid_topic
+  steps:
+  - intent: topics
+  - action: action_respond_with_topic
+
+
+
+
+- story: Check duration greater than user input time
+  steps:
+    - intent: provide_user_input_time
+       
+    - action: action_find_greater_duration_courses
+
+- story: Check duration equal to user input time
+  steps:
+    - intent: provide_user_input_time_equal
+       
+    - action: action_find_same_duration_courses
+
+- story: Check subscribers greater than userinput
+  steps:
+    - intent: get minimum subscribers
+       
+    - action: action_find_no_subscribers
+
+
+- story: irrelevant
+  steps:
+    - intent: unrelated    
+    - action: utter_unrelated
+
+
+
+# - story: Get entity information 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_udemy_welcome
+#   #- action: action_print_executed_story
+#   - intent: get_entity_info
+#   - action: action_respond_with_topic
+#   - action: utter_topic_list
+#   - action: utter_thanks
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   #- action: action_print_executed_story
+
+# - story: Get entity information 3
+#   steps:
+#   #- intent: greet
+#   #- action: utter_greet
+#   #- action: utter_udemy_welcome
+#   - intent: get_entity_info
+#   - action: utter_topic_list
+#   - action: utter_thanks
+#   #- intent: get_entity_info
+#   - action: action_respond_with_topic
+#   #- action: utter_respond_with_topi
+#   - intent: paid_free
+#   - action: utter_thanks
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   - action: action_print_executed_story
+
+# - story: Get entity information 4
+#   steps:
+#   #- intent: greet
+#   #- action: utter_greet
+#   #- action: utter_udemy_welcome
+#   - intent: topics
+#   - action: utter_topic_list
+#   - action: utter_thanks
+#   #- intent: get_entity_info
+#   #- action: action_respond_with_topic
+#   #- action: utter_respond_with_topi
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   - action: action_print_executed_story
